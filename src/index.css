@@ -3,3 +3,27 @@
 body {
   @apply bg-gray-900 text-white;
 }
+
+@keyframes neonGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+    box-shadow:
+      0 0 10px rgba(255, 0, 130, 0.9),
+      0 0 20px rgba(255, 0, 130, 0.7),
+      0 0 40px rgba(255, 0, 130, 0.5);
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+    box-shadow:
+      0 0 20px rgba(255, 0, 130, 0),
+      0 0 50px rgba(255, 0, 130, 0);
+  }
+}
+
+.animate-neonGlow {
+  animation: neonGlow 0.5s ease-out forwards;
+  border: 2px solid rgba(255, 0, 130, 0.8);
+}
