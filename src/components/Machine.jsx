@@ -7,7 +7,7 @@ const Machine = () => {
   const [display, setDisplay] = React.useState('');
 
   return (
-    <div id="drum-machine" className='w-4/5 mx-auto mt-10'>
+    <div id="drum-machine" className='w-4/5 md:w-2/5 mx-auto mt-10'>
       <DrumSet setDisplay={setDisplay} />
       <Display display={display} />
     </div>

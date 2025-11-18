@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useRef } from 'react';
 
-const DrumKey = ({ trigger, sound }) => {
+const DrumKey = ({ trigger, sound, description, setDisplay }) => {
 
 	const audio = useRef();
 	const source = `https://s3.amazonaws.com/freecodecamp/drums/${sound}.mp3`;
@@ -21,6 +21,7 @@ const DrumKey = ({ trigger, sound }) => {
 	}, [trigger]);
 
 	const playSound = () => {
+		setDisplay(description);
 		audio.current.currentTime = 0;
 		audio.current.play();
 	}
