@@ -26,9 +26,9 @@ const DrumKey = ({ trigger, sound }) => {
 	}
 
   return (
-    <div onClick={playSound} className="size-full aspect-square bg-gray-800 rounded-md flex items-center justify-center text-white text-2xl font-bold select-none cursor-pointer hover:bg-gray-700 active:bg-gray-600 shadow-md">
+    <div id={sound} onClick={playSound} className="drum-pad size-full aspect-square bg-gray-800 rounded-md flex items-center justify-center text-white text-2xl font-bold select-none cursor-pointer hover:bg-gray-700 active:bg-gray-600 shadow-md">
         {trigger}
-        <audio ref={audio} id={trigger} src={source}></audio>
+        <audio className="clip" ref={audio} id={trigger} src={source}></audio>
     </div>
   )
 }
