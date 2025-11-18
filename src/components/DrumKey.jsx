@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef } from 'react';
 
 const DrumKey = ({ trigger, sound }) => {
 
 	const audio = useRef();
 	const source = `https://s3.amazonaws.com/freecodecamp/drums/${sound}.mp3`;
+
+	useEffect(() => {
+		const handleKeyPress = (e) => {
+			if (e.key.toUpperCase() === trigger) {
+				playSound();
+			}
+		}
+
+		window.addEventListener('keydown', handleKeyPress);
+
+		return () => {
+			window.removeEventListener('keydown', handleKeyPress);
+		}
+	}, [trigger]);
 
 	const playSound = () => {
 		audio.current.currentTime = 0;
