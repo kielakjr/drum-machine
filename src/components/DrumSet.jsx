@@ -2,22 +2,22 @@ import React from 'react'
 import DrumKey from './DrumKey';
 
 const DRUMKEYS = [
-  { key: 'Q', sound: 'kick' },
-  { key: 'W', sound: 'snare' },
-  { key: 'E', sound: 'hihat' },
-  { key: 'A', sound: 'tom1' },
-  { key: 'S', sound: 'tom2' },
-  { key: 'D', sound: 'tom3' },
-  { key: 'Z', sound: 'clap' },
-  { key: 'X', sound: 'ride' },
-  { key: 'C', sound: 'crash' },
+  { key: 'Q', sound: 'Heater-1' },
+  { key: 'W', sound: 'Heater-2' },
+  { key: 'E', sound: 'Heater-3' },
+  { key: 'A', sound: 'Heater-4_1' },
+  { key: 'S', sound: 'Heater-6' },
+  { key: 'D', sound: 'Dsc_Oh' },
+  { key: 'Z', sound: 'Kick_n_Hat' },
+  { key: 'X', sound: 'RP4_KICK_1' },
+  { key: 'C', sound: 'Cev_H2' },
 ];
 
 const DrumSet = () => {
   return (
     <div className="grid grid-cols-3 gap-2">
         {DRUMKEYS.map(({key, sound}) => (
-            <DrumKey trigger={key} sound={sound} />
+            <DrumKey key={key} trigger={key} sound={sound} />
         ))}
     </div>
   )

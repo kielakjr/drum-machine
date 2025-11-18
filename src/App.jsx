@@ -1,12 +1,11 @@
 import React from 'react'
-import DrumKey from './components/DrumKey'
-import DrumSet from './components/DrumSet'
+import Machine from './components/Machine'
 
 
 const App = () => {
   return (
     <div className='w-4/5 mx-auto mt-10'>
-      <DrumSet />
+      <Machine />
     </div>
   )
 }
