@@ -9,7 +9,7 @@ const DrumKey = ({ trigger, sound, description, setDisplay }) => {
 	const source = `https://s3.amazonaws.com/freecodecamp/drums/${sound}.mp3`;
 
 	const triggerAnimation = () => {
-		const id = crypto.randomUUID(); // unikalne ID efektu
+		const id = crypto.randomUUID();
 
 		setEffects(prev => [...prev, id]);
 
